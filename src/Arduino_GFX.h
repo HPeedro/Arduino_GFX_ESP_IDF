@@ -172,6 +172,7 @@ class Arduino_GFX : public Print, public Arduino_G
 {
 public:
   Arduino_GFX(int16_t w, int16_t h); // Constructor
+  using Print::flush;
 
   // This MUST be defined by the subclass:
   virtual bool begin(int32_t speed = GFX_NOT_DEFINED) = 0;
